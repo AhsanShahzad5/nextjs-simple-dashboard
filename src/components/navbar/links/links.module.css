@@ -1,0 +1,42 @@
+/* Default styles for larger screens */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menuButton, .mobileLinks {
+  display: none; /* Initially hidden */
+}
+
+/* Media query for screens 768px wide or less */
+@media screen and (max-width: 768px) {
+  .links {
+    display: none; /* Hide links container */
+  }
+
+  .menuButton {
+    display: block; /* Show menu button */
+    cursor: pointer;
+  }
+
+  .mobileLinks {
+    display: flex; /* Show mobile links */
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 40%;
+    height: calc(100vh - 100px);
+    background-color: var(--bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
